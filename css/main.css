@@ -199,7 +199,6 @@ html {
 
 @media (max-width: 600px) {
   .playlist {
-    position: absolute;
     width: 100%;
     margin-top: 5rem;
   }
