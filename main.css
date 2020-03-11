@@ -246,7 +246,7 @@ html {
 }
 
 .playlist__item__icon--1 {
-	background: url("../images/music-solid.svg");
+	background: url("music-solid.svg");
 	background-repeat: no-repeat;
 	width: 100%;
 	height: 50%;
