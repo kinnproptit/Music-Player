@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<script
+			src="https://kit.fontawesome.com/3700045882.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Music Player</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="playerCard">
+				<div class="playerCard__img">
+					<img src="../images/img.jpg" alt="" />
+				</div>
+				<div class="playerCard__content">
+					<audio src="videos/A Little Braver.mp3" id="audio"></audio>
+					<div class="playerCard-controller">
+						<div class="playerCard-controller__item" id="prev">
+							<i class="fas fa-backward"></i>
+						</div>
+						<div class="playerCard-controller__item" id="play">
+							<i class="fas fa-play"></i>
+						</div>
+						<div class="playerCard-controller__item" id="next">
+							<i class="fas fa-forward"></i>
+						</div>
+					</div>
+
+					<div class="playerCard__playbar">
+						<div class="playerCard__progress">
+							<div class="progress-bar"></div>
+						</div>
+						<div class="playerCard__playbar--timer">
+							<span class="playerCard__playbar--timer--start">
+								0:00
+							</span>
+							<span class="playerCard__playbar--timer--end">
+								0:00
+							</span>
+						</div>
+					</div>
+
+					<div class="playerCard__description">
+						<div class="playerCard__description--song-name">
+							...
+						</div>
+						<div class="playerCard__description--artist">
+							....
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="playlist"> </div>
+		</div>
+
+		<script src="./app.js"></script>
+	</body>
+</html>

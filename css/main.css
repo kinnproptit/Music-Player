@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,700i&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.3))), url("../images/bg.jpg");
+  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("../images/bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+*,
+*::before,
+*::after {
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 10rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (max-width: 600px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.playerCard {
+  width: 30%;
+  display: inline-block;
+  min-height: 500px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#915252), to(#3a3376));
+  background: linear-gradient(to bottom right, #915252, #3a3376);
+  border-radius: 10px;
+  -webkit-box-shadow: 0rem 1.8rem 5rem rgba(255, 255, 255, 0.5);
+          box-shadow: 0rem 1.8rem 5rem rgba(255, 255, 255, 0.5);
+  margin: 1rem;
+}
+
+@media (max-width: 1060px) {
+  .playerCard {
+    width: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .playerCard {
+    width: 80%;
+  }
+}
+
+.playerCard__img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.playerCard__content {
+  font-family: "Roboto", sans-serif;
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0;
+}
+
+.playerCard-controller {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.playerCard-controller__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3rem;
+  height: 3rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-size: 30px;
+}
+
+.playerCard__playbar {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.playerCard__playbar--timer {
+  margin-top: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.6rem;
+}
+
+.playerCard__progress {
+  width: 100%;
+  background: #000;
+  height: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.playerCard__description {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.playerCard__description--song-name {
+  font-size: 2.5rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+.playerCard__description--artist {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.control-btn {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.playlist {
+  width: 60%;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 600px) {
+  .playlist {
+    position: absolute;
+    width: 100%;
+    margin-top: 5rem;
+  }
+}
+
+.playlist__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.6rem;
+  padding: 1.5rem;
+  height: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.playlist__item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.playlist__item__icon {
+  width: 3rem;
+  height: 100%;
+  margin-right: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.playlist__item__icon--1 {
+  background: url("../images/music-solid.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50%;
+}
+
+.playlist__item__description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
+.playlist__item__description--line-2 span {
+  color: #bdafaf;
+}
+
+.playlist__item__more {
+  padding: 2rem;
+  position: relative;
+}
+
+.playlist__item__more__dropdown {
+  position: absolute;
+  min-width: 20rem;
+  top: 65%;
+  right: 65%;
+  background: #282828;
+  opacity: 0;
+}
+
+.playlist__item__more__dropdown li {
+  list-style: none;
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #948c8c;
+}
+
+.playlist__item__more__dropdown li:hover {
+  background: #333;
+  color: #fff;
+}
+
+.playlist__item__duration {
+  color: #bdafaf;
+}
+
+.playing {
+  margin-right: 1rem;
+}
+
+.playing-effect {
+  color: #1ed760;
+}
+
+.progress-bar {
+  height: 100%;
+  background: orangered;
+  position: relative;
+  width: 0;
+  border-radius: 5px;
+}
+
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  top: -3px;
+  right: -2px;
+  border-radius: 50%;
+  background: #fff;
+}
+/*# sourceMappingURL=main.css.map */
